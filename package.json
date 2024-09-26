@@ -1,9 +1,14 @@
 {
-    "name": "create-blaize-template",
-    "version": "1.0.0",
+    "name": "create-blaize-audit-template",
+    "version": "1.0.1",
     "description": "Blaize template for audits",
     "author": "blaize@blaize.tech",
     "license": "MIT",
+    "bin": "./bin/cli.js",
+    "repository": {
+        "type": "git",
+        "url": " https://github.com/VladyslavP5/create-blaize-audit"
+    },
     "keywords": [
         "blockchain",
         "ethereum",
@@ -15,10 +20,8 @@
     "files": [
         "/.husky/**/*",
         "!/.husky/_/**/*",
-        "/abi/**/*",
         "/contracts/**/*",
         "/coverage/**/*",
-        "/docs/**/*",
         "/scripts/**/*",
         "/test/**/*",
         ".editorconfig",
@@ -74,7 +77,6 @@
         "dev:node": "npx hardhat node",
         "ndeploy:all": "ENABLED_OPTIMIZER=true npm run compile-all && node scripts/deployment/deploy.js",
         "dev:flatten": "npm run compile-all && npx hardhat flatten",
-        "postinstall": "npm run compile-all && npm run dev:abi && npm run dev:docs",
         "prepare": "npx husky install"
     },
     "dependencies": {
