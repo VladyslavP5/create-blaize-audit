@@ -137,17 +137,17 @@ const config: HardhatUserConfig = {
              */
             // gas: 30000000//,
             // gasPrice: 8000000000
-        },
+        }
         // Ethereum.
         // Rest parameter (...) to treat it as a single array (added in ES6)
         // mainnet: {
         //     url: process.env.ETHEREUM_URL || "",
         //     accounts: [ETHEREUM_MAINNET_KEY]
         // },
-        sepolia: {
-            url: process.env.SEPOLIA_URL || "",
-            accounts: [ETHEREUM_TESTNET_KEY]
-        } //,
+        // sepolia: {
+        //     url: process.env.SEPOLIA_URL || "",
+        //     accounts: [ETHEREUM_TESTNET_KEY]
+        // },
         // // Polygon.
         // // Example of adding of other networks.
         // polygon: {
