@@ -1,0 +1,26 @@
+# This pre-commit hook script performs the following actions:
+# 1. Loads environment variables from a .env file if it exists.
+# 2. Checks if the DEVELOPMENT environment variable is set to "true".
+# 3. If DEVELOPMENT is "true":
+#    a. Runs the `dev:abi` npm script and stages changes in the `abi/` directory.
+#    b. Runs the `dev:docs` npm script and stages changes in the `docs/` directory.
+#    c. Runs lint-staged to lint and format staged files.
+
+# Load environment variables from .env file
+if [ -f .env ]; then
+    export $(grep -v '^#' .env | xargs)
+fi
+
+# Check if DEVELOPMENT is set to true
+if [ "$DEVELOPMENT" = "true" ]; then
+    npm run dev:abi
+    git add abi/
+
+    npm run dev:docs
+    git add docs/
+
+    npx lint-staged
+fi
+
+
+
