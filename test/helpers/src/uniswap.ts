@@ -13,7 +13,7 @@ import {
     IWETH,
     UniswapV2Factory,
     UniswapV2Router02
-} from "../../../typechain-types";
+} from "../../../helper-types";
 
 const ZERO_ADDRESS = ethers.ZeroAddress;
 
